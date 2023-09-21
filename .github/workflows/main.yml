@@ -12,4 +12,4 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: "Deployed site"
-      run: curl -X POST -d {} db108eed-c887-4e48-a77a-897e884e5dda
+      run: curl -X POST -d {} steady-bienenstitch-95ef47.netlify.app
