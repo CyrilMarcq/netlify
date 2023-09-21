@@ -1,0 +1,20 @@
+name: "ci-cd pipeline"
+
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Deploy production to Netlify
+      uses: South-Paw/action-netlify-deploy@v1.2.0
+      with:
+        github-token: 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
+        netlify-auth-token: G2riDvLDtU1GP9C_TSWj1Q7GLXuSpuwKNiA8FCn8r_k
+        netlify-site-id: db108eed-c887-4e48-a77a-897e884e5dda
+        comment-on-commit: true
